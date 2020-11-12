@@ -2,11 +2,11 @@ package com.Nextstacks.toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -17,13 +17,13 @@ public class BottomNavigation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
-//        Toolbar mbToolbar = findViewById(R.id.bottom_toolBar);
+        Toolbar mbToolbar = findViewById(R.id.bottom_toolBar);
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
-//        setActionBar(mbToolbar);
-//        if(getSupportActionBar() != null){
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//            getSupportActionBar().setTitle("Check Your Details");
-//        }
+        setSupportActionBar(mbToolbar);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Check Your Details");
+        }
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
