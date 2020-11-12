@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ToolBar</string>
+    <string name="main_text">This is the main page</string>
+    <string name="welcome_to_home_page">Welcome to Home Page</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>
